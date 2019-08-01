@@ -24,7 +24,7 @@
 | 触摸屏 | OK |
 | 触摸板 | OK |
 | 键盘调亮度 | 未处理 |
-| 键盘调音| OK,静音键现实图标，但不能静音 |
+| 键盘调音| OK,静音键显示图标，但不能静音 |
 | 电源   | NOK |
 | WIFI  | NOK |
 | 蓝牙   | NOK|
@@ -36,8 +36,8 @@
 - 蓝牙：个人使用usb蓝牙适配器，不处理，猜测参照 Matebook X pro 2018机型处理即可
 ## 四、安装需求
 USB Hub或扩展坞(该机型仅有1个USB接口，安装需要两个USB设备)
-U盘 8G以上
-USB鼠标 
+- U盘 8G以上
+- USB鼠标（非蓝牙鼠标）
 
 ## 三、软件下载
 
@@ -81,5 +81,6 @@ sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking 
 sudo defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
 ···
 ## 十、Clover修改过程
