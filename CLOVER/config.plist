@@ -51,6 +51,20 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change ECAV=One to ECTK=zero</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					cAFFQ0FW
+					</data>
+					<key>Replace</key>
+					<data>
+					cABFQ1RL
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change _QA8 to XQA8</string>
 					<key>Disabled</key>
 					<false/>
@@ -163,54 +177,35 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change Method(_Q0A,0,N) to XQ0A</string>
+					<string>change AC0 to ADP1</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					X1EwQQA=
+					QUMwXw==
 					</data>
 					<key>Replace</key>
 					<data>
-					WFEwQQA=
+					QURQMQ==
 					</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(_Q0B,0,N) to XQ0B</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1EwQgA=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFEwQgA=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change  _CRS to XCRS in TPD0</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X0NSUw==
-					</data>
-					<key>Replace</key>
-					<data>
-					WENSUw==
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					VFBEMA==
-					</data>
-				</dict>
+				
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
+
+		<key>DropTables</key>
+		<array>
+			<dict>
+				<key>Signature</key>
+				<string>MCFG</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>DMAR</string>
+			</dict>
+		</array>
 		<key>FixHeaders</key>
 		<true/>
 		<key>FixMCFG</key>
@@ -270,6 +265,8 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>AAPL00,override-no-connect</key>
+				<data>AP///////wAoiSpCAAAAAAAbAQSQHRR4A95Qo1RMmSYPUFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgMJcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkgICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgAE4=</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>
 				AACbPg==
