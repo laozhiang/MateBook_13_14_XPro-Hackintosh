@@ -1,9 +1,19 @@
 # Matebook X Pro 2019 黑苹果教程
+## 声明1：
+1、目前只支持 Mac OSX Majave 10.14.5，只支持10.14.5，只支持10.14.5<BR>
+2、想折腾的自己搞，不想自己折腾的还是算了吧，各种坑巨多<BR>
+3、没有装过苹果的机友建议一步一步按照文档来，别做过多动作，想太多不一定是好事<BR>
+4、初次安装的朋友，注意备份数据，也可以先用移动硬盘试装<BR>
+5、个人机器由于更换了主板，DSDT与零售版不一致，部分功能为网友测试
 
-记录Matebook X Pro 2019版黑苹果安装过程
-本文仅记录黑苹果过程，不涉及多系统安装。后续我在另外写一篇多系统启动<BR>
-声明:个人理解黑苹果重在稳定，所以不会盲目的更新版本，不追新。每年更新一个OSX的大版本或重大更新，其余一律不跟风，也不要提更新的issue，有兴趣的机友可以自己更新。
+## 声明2:
+个人理解黑苹果重在稳定，所以不会盲目的更新版本，不追新。每年更新一个OSX的大版本或重大更新，其余一律不跟风，也不要提更新的issue，有兴趣的机友可以自己更新。
 
+## 文档说明：
+1、记录Matebook X Pro 2019版黑苹果安装过程<BR>
+2、本文仅记录黑苹果过程，不涉及多系统安装。多系统启动参见<BR>
+3、问题交流请到QQ群：812158410
+≈
 ## 一、机型配置信息
 | 项目 | 详细参数|
 | :--: | :-------------------- |
@@ -11,10 +21,10 @@
 | CPU  | i5 8265u |
 |内存| DDR3L 8G|
 | 显卡 | UHD620|
-| 硬盘 | 在客服中心更换为 Intel P760(据说三星PM981 不支持黑苹果)|
+| 硬盘 | 该机型已知有两种硬盘<BR>西数硬盘SN720不存在问题<BR>三星PM981不支持黑苹果(970 EVO PlUS一样不支持),需要使用外置硬盘或更换硬盘|
 | 声卡 | Realtek ALC256 |
-|LCD| 3000*2000|
-|BIOS|1.15|
+|LCD| 该机型已知两种显示器，配置文件中内建显示器不同，所以有两套不同的配置文件，需要自行选择<BR>一种为TLX1388<BR>一种为<BR>
+|BIOS|请确认升级到1.15|
 | | |
 
 ## 二、成果
@@ -23,111 +33,141 @@
 | 版本 | Mac OSX Majave 10.14.5（目前仅支持，其他版本需要找到相应补丁） |
 | 电源   | OK |
 | 电池电量 | OK |
-| 显示   | 内屏OK<BR>DP外接屏OK<BR>HDMI外接屏无设备未测试 |
+| 显示   | 内屏OK<BR>DP外接屏OK<BR>HDMI外接屏无网友测试OK<BR>外接4K不稳定，开启启动后偶尔黑屏，需要合盖开盖后正常，因此有两套配置文件，根据个人需要选择|
 | 亮度 | OK |
 | 键盘调整亮度| OK，FN+F1/FN+F2调整，显示小太阳 |
 | 自动调整亮度| NOK|
-| 声音   | OK，外放耳机自动切换OK |
+| 声音   | 半OK，目前外放和micOK，耳麦存在问题|
+| 键盘调音量| OK |
 | 触摸屏 | OK |
 | 触摸板 | OK |
-| 键盘调亮度 | OK |
-| 键盘调音量| OK, 静音键显示图标，但不能静音 |
-| WIFI  | 全球无解，建议采用外接USB WiFi 适配器，需要确认是否支持MAC|
-| 蓝牙   | No Test|
+| WIFI  | 全球无解，建议采用外接USB WiFi 适配器，需要确认是否支持MAC。需要占用USB端口|
+| 蓝牙   | 方式1、曲线救国，安装虚拟机，使用库上蓝牙启动包，驱动蓝牙<BR>方式2、采用USB蓝牙适配器，BIOS中关闭机器自带蓝牙，这种方式需要占用USB端口，所以需要扩展坞|
 | 摄像头 | OK |
 |睡眠唤醒 | OK |
-|合盖睡眠 | OK |
-|开盖按键唤醒 | OK |
-| 睿频 | 不会测试，自认为支持|
+|合盖睡眠 | OK<BR> 两种情况<BR>1、外接电源同时外接显示器时，切换为台式机模式，外屏不关<BR>2、非同时外接电源和显示器时机器直接睡眠|
+|开盖唤醒 | OK |
+| 睿频 | OK|
 |  | |
 ## 三、问题记录
-- 启动：偶尔启动不成功，
-- 登录黑屏：如果出现该情况，合上笔记本，等半分钟，再打开看看是否OK。
-- 蓝牙：个人使用usb蓝牙适配器，经其他机友确认需要热启动。
+- 启动：偶尔启动不成功，建议启动不关闭啰嗦模式
+- 登录界面偶尔黑屏：如果出现该情况，合上笔记本，等几秒，再打开看看是否OK。
+- 声卡：目前没有搞定驱动，外放和MIC可用，耳麦有问题，详情见安装后处理
+- 蓝牙：两种支持方式，参见成果描述
 - 独显：不支持
 - 指纹： 不支持
 ## 四、安装需求
-- USB Hub或扩展坞(该机型仅有1个USB接口，安装需要两个USB设备)（非必须，除非U盘和鼠标一个是Typec接口）
+- USB Hub或扩展坞(必须)-该机型仅有1个USB接口，安装需要两个USB设备，U盘和USB鼠标
 - U盘 8G以上（必须）
-- USB鼠标（非蓝牙鼠标）（必须，安装过程中触摸板不可用）
-- WinPE U盘（非必须，出现问题需要WinPE启动解决，安装后需要通过windows下的easyUEFI添加启动项，Linux机友Live系统U盘也可）
-  
+- USB鼠标（必须，非蓝牙鼠标）有线无线均可，安装过程中触摸板不可用
+- WinPE U盘（非必须），出现问题需要WinPE启动解决，安装后需要通过windows下的easyUEFI添加启动项，Linux机友Live系统U盘也可
+- 如安装到移动硬盘，请外接电源（已经出现几例未外接电源启动不成功的），安装过程中出现突然重启或错误可以尝试换一下移动硬盘接入端口，建议接雷电口  
 个人建议：多用ubuntu 18.4做一个安装盘，其中包含liveCD，linux下一些操作比widows要方面很多。
 精通多重启动的用户可以一个U盘包含winpe，和linuxCD
 ## 五、小白版安装过程
 ### 1、软件下载
 | 软件 | 是否必须 | 用途 | 下载地址 |
 | :--: | :--: | :--: | :-------------------- |
-| MoJave镜像 | 无MAC机友必须 | - | 仅为推荐地址，相同版本的其他下载也可以<BR> https://blog.daliansky.net/macOS-Mojave-10.14.5-18F132-official-version-with-Clover-4928-original-image.html |
-| TransMac | 无MAC机友必须 | 制作安装U盘 |商业软件，不提供下载地址，|
+| MoJave镜像 | 无MAC机友必须 | - | 仅为推荐地址，相同版本的其他下载也可以，不保证好用，改版本是经过机友测试的<BR> https://blog.daliansky.net/macOS-Mojave-10.14.5-18F132-official-version-with-Clover-4928-original-image.html |
 | DiskGenius | 非必须 |制作winPE，调整硬盘分区|http://www.diskgenius.com |
-| EasyUEFI | Windows机友必须；<BR>Linux使用efibootmgr即可| 安装完成后，增加硬盘启动项 |未找到官方下载地址|
-|Github安装包 | 必须 | 黑苹果启动|https://github.com/laozhiang/MateBook_X_Pro_2019-Hackintosh<BR> 下载方法：1、使用git软件clone整个库<BR>2、页面找到绿色按钮 "Clone or Download",点击弹出小窗口，选择Download ZIP|
+| EasyUEFI | Windows机友必须；<BR>Linux使用efibootmgr即可| 确认使用OK后，增加硬盘启动项 |未找到官方下载地址|
+|Github安装包 | 必须 | 黑苹果启动|https://github.com/laozhiang/MateBook_X_Pro_2019-Hackintosh<BR> 下载方法：|
 |  | |
 ### 2、制作安装盘
-#### 无MAC机友（Windows机友）
-- step1: 选中TransMac，右键 以管理员身份运行
-- step2: 右键选择需要使用的U盘，选择 Format Disk for Mac, 将U盘格式化成Mac格式
-- step3: 格式化U盘会弹出一个格式化窗口，在Volume label 中输入自已想要命名的标签（不用命名可以略过），选择 Mac OS Extended HFS+格式。
-点击OK继续；
-- step4:出现一个提示框，选择 Yes 继续；
-- step5：又弹出一个 准备格式化 提示框，显示格式化的U盘信息和将覆盖的文件大小；
-点击 OK 确认格式化并继续；（当然你大可不必这么认真，一路狂点YES，OK吧）
-- step6：等待格式化完成；
-- step7：准备写入OSX系统安装镜像到U盘，右键选择U盘，选择 Restore with Disk image；
-- step8：选择下载好的OS X系统安装镜像; (那当然要看你下载的是什么版本的系统镜像)，并选择打开；
-- step9：又出现一个提示窗口，选择OK继续；
-- step10：出现一个写入进度对话框，耐心等待写入进度结束，完成OS X系统安装U盘的制作 。（若卡住或不显示进度请等待，大致需要25分钟时间，这个根据电脑速度和硬盘读取速度决定）
-- step11：完成后，点击U盘，可以看到我们需要的系统安装文件已经写入到U盘。
-- step12: 将在github上下载的文件全部拷贝的安装盘上，建议新建一个目录存放
-- step13: 将gitbub上EFI For USB拷贝到U盘上<BR>
-  打开DiskGenius,左侧选择U盘，选装EFI分区
-  EFI分区原有EFI目录，将github下载文件中EFI for USB 目录拷贝到EFI分区，并重命名为EFI
-  说明：制作出的安装盘一般有EFI分区，请将EFI分区内的文件删除。
-#### 有MAC机友
-- Step1： 通过AppStore下载OSX安装包
+#### 无MAC机友----网上找制作说明
+本来写了这部分说明，发现大家都是在下载点看说明，因此删掉<BR>。请注意，只看下载点说明的镜像制作部分，安装部分做好别看，和本文相似，但是非专用说明，有坑。<BR>
+使用工具将DMG文件写到U盘后，需要以下处理
+- step1: 将在github上下载的文件全部拷贝的安装盘上(安装后，在MAC系统中添加驱动过程需要)，建议新建一个目录存放(做安装U盘的工具应支持，使用transMAC软件可以操作，或者更简单放到另外一个FAT32格式U盘上备用)
+- step2: 删除U盘EFI分区上EFI目录(镜像中自带EFI为通用配置，不适用，启动不成功)<BR>
+- step3: 解压缩EFI_for_Install_USB.zip<BR>
+- step4: 打开DiskGenius,左侧选择U盘，选装EFI分区，将EFI_for_Install_USB解压缩后目录拷贝到EFI分区，并重命名为EFI  
+<B>结束后EFI分区内目录格式，请注意核对</B>
+
+	```
+	EFI
+	  |----BOOT
+	  |      |-BOOTX63.efi
+	  |----CLOVER
+	  |      |-......
+	  |      |-......
+	```
+  #### 有MAC机友
+- Step1： 通过AppStore下载OSX安装包（现在下不了了，官方只支持最新版下载，找以前的备份吧）
 - Step2：打开 “应用程序 → 实用工具 → 磁盘工具”，将U盘「抹掉」(格式化) 成「Mac OS X 扩展（日志式）」格式、GUID 分区图，并将 U 盘命名为「Install macOS Mojave」。注意：这个盘符名称必须与后面的命令里的名称一致，需要认真看清楚，很多新手容易出错在这里)
 - Step3：打开 “应用程序→实用工具→终端”，将下面的一段命令复制并粘贴进去：
 
- 如要U盘命名为「Mojave」，命令中 「/Volumes/Install\ macOS\ Mojave」需要改为「/Volumes/Mojave」
+ 	如要U盘命名为「Mojave」，命令中 「/Volumes/Install\ macOS\ Mojave」需要改为「/Volumes/Mojave」
 
-```
-sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/Install\ macOS\ Mojave /Applications/Install\ macOS\ Mojave.app --nointeraction
-```
+		```
+		sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/Install\ macOS\ Mojave /Applications/Install\ macOS\ Mojave.app --nointeraction
+		```
 - Step4: 回车并执行上方命令，这时会提示让你输入管理员密码，便会开始制作过程
 - Step5: 请耐心等待，时间较长，等待命令执行结束。
 - Step6: 把github上下载文件拷贝到U盘上，建议新建目录，安装后完善用
-- Step7: 将github下载文件中EFI for USB 目录拷贝到EFI分区，并重命名为EFI<BR>
-不会挂在EFI分区机友，可是使用github下载文件中tools目录下Clover Configurator，打开软件，左侧选择“挂载分区”，右侧下部选中U盘的EFI分析，点击挂载分区，此时弹出窗口输入密码，确认即可，在桌面找到EFI盘符可进入
+- Step7: 将github下载文件中EFI_for_Install_USB.zip解压缩后拷贝到EFI分区，并重命名为EFI<BR>
+不会挂在EFI分区机友，可是使用下载文件中tools目录下"Clover Configurator.zip“，打开软件，左侧选择“挂载分区”，右侧下部选中U盘的EFI，点击挂载分区，此时弹出窗口输入密码，确认即可，在桌面找到EFI盘符可进入
+<B>结束后EFI分区内目录格式，请注意核对</B>
+
+	```
+	EFI
+	  |----BOOT
+	  |      |-BOOTX63.efi
+	  |----CLOVER
+	  |      |-......
+	  |      |-......
+	```
 ### 3、现在开始动硬盘了，请一定要备份好数据，可能整个盘数据全丢，尤其是新黑苹果玩家
 ### 4、调整硬盘分区
 这部分出问题最多，很多人又想留着原系统和一键还原。只能自己操作<BR>
 强烈建议，这一步使用DiskGenius制作一个WINPE，在winPE下操作<BR>
 强烈建议，windows机友准备一个包含easyUEFI的winpe U盘，如果安装过程中，一不小心抹除全盘，需要在winPE下增加硬盘启动项
 
+硬盘和移动硬盘同样适用
 - EFI分区要保证大于200M<BR>
 - 使用DiskGenius分一个分区，格式为hpfs+
+
+关于分区的其他建议：
+  建议多分一个FAT32的分区，32M足矣，1）用来保存以下你认为完美的配置，备份EFI分区，2）避免Windows更新导致启动文件丢失，3）如果你需要多套配置（外接4K和非外接4K启动两个启动项）。<BR>
+
+补充知识：BIOS启动U盘、移动硬盘和硬盘有所不同
+- U盘、移动硬盘启动：BIOS查找盘上EFI分区的EFI/BOOT/BOOTX64.efi,进行启动<BR>
+- 硬盘启动：硬盘是根据注册到BIOS中的启动项进行启动，BIOS启动项增删改查方式，window有命令BCDEDIT，或者用工具EasyUEFI，linux使用efibootmgr命令<BR>
+
 ### 5、开始安装
-- step1、开机，按F2进入Bios设置，关闭安全启动，F10保存并重新启动
-- step2、按F12选择U盘启动
-- step3、进入安装过程<BR>
+- Step1：开机直接按F2，进入BIOS设置界面
+- Step2：关闭相关硬盘启动项。理由：安装过程中全部使用U盘启动，每次开机按F12选择启动菜单来不及
+- Step3：关闭安全启动
+- Step4：使用PM981硬盘的机友，安装到移动硬盘上，请关闭设置界面下半部分的HDD设备。理由：PM981会造成不定时重启，增加安装难度
+- Step5：F10保存，重启
+- step6、按F12选择U盘启动
+- step7、进入安装过程<BR>
 这部分我就不写了，这部分网上教程很多。<BR>
 容易出现问题：<BR>
-1）无法选择安装盘，一般是分区抹盘失败/EFI小于200M<BR>
-2)抹盘失败基本是分区没搞好
+1）无法选择安装盘，一般是分区抹盘失败/EFI小于200M<BR>2) 抹盘失败基本是分区没搞好
+
 ### 5、安装后处理
--Step1:将github上patch目录下AppleIntelCFLGraphicsFramebuffer.kext.zip解压缩
--Step2:打开“访达”窗口，菜单选择“前往”->“前往文件夹”；弹出窗口，输入“/System/Library/Extensions",前往，找到AppleIntelCFLGraphicsFramebuffer.kext，删除
--step3:将AppleIntelCFLGraphicsFramebuffer.kext.zip解压得到文件拷贝到“/System/Library/Extensions"
--step4:找到github下载tools目录下Kext Utility2.6.6.zip解压并执行进行重建驱动缓存，需要输入用户密码。时间教程请耐心等待，只到下方“Quit”按钮可用
-- Step5:打开U盘EFI分区；不会挂在EFI分区机友，可是使用github下载文件中tools目录下Clover Configurator，打开软件，左侧选择“挂载分区”，右侧下部选中U盘的EFI分析，点击挂载分区，此时弹出窗口输入密码，确认即可，在桌面找到EFI盘符可进入
-- step6:进入EFI分区，EFI目录将Clover目录改名为“CloverInstall”-step7:把github下载的CLOVER复制到U盘EFI分区EFI目录下
--step8:挂载硬盘EFI分区，方法同上
--step9:把github下载的CLOVER复制到硬盘EFI分区EFI目录下
-- Step10:添加BIOS启动项
-  - windows下采用easyuefi
-  - linux采用efibootmgr命令添加
--step10:不想看到启动满屏代码的机友，采用文本编辑器，打开EFI/CLOVER目录下config.plist文件
+#### 添加驱动
+- Step1:将github下载patch目录下AppleIntelCFLGraphicsFramebuffer.kext.zip解压缩
+- Step2:打开“访达”窗口，菜单选择“前往”->“前往文件夹”；弹出窗口，输入“/System/Library/Extensions",前往，找到AppleIntelCFLGraphicsFramebuffer.kext，删除
+- step3:将AppleIntelCFLGraphicsFramebuffer.kext.zip解压得到文件拷贝到“/System/Library/Extensions"
+- step4:找到github下载tools目录下Kext Utility2.6.6.zip解压并执行进行重建驱动缓存，需要输入用户密码。时间教程请耐心等待，只到下方“Quit”按钮可用
+- Step5:打开U盘EFI分区；不会挂载EFI分区机友，可是使用github下载文件中tools目录下“Clover Configurator.zip"，打开软件，左侧选择“挂载分区”，右侧下部选中U盘的EFI分区，点击挂载分区，此时弹出窗口输入密码，确认即可，在桌面找到EFI盘符可进入
+- step6:进入EFI分区，EFI目录将Clover目录改名为“CloverInstall”
+- step7:把github下载的CLOVER复制到U盘EFI分区EFI目录下
+- step8:挂载硬盘EFI分区，方法同上
+- step9:把github下载的EFI_MateBookXpro2019.zip解压缩，并将其中CLOVER复制到EFI分区EFI目录下
+- step10:重启
+
+	此时效果 显卡，电源、触摸板、声卡等基本OK，蓝牙不可用。
+#### 处理蓝牙
+- Step1:安装VMware fusion，软件包激活码自行查找
+- Step2:解压蓝牙启动工具.zip,将解压后文件中“蓝牙启动.zip”解压缩到当前用户目录，虚拟机 目录下
+- Step3:双击执行蓝牙脚本目录的 install.command
+- Step4:重新启动
+
+	安装脚本已经安装开机启动功能，开机自动启动虚拟机驱动蓝牙<BR>安装脚本会在桌面创建"蓝牙启动.command",蓝牙不能连接时，可以双击脚本重新驱动蓝牙，<BR>
+#### 处理启动啰嗦模式界面
+  打开EFI分区EFI/CLOVER/config.plist
   找到
  ```
   <key>Boot</key>
@@ -139,7 +179,9 @@ sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallme
 	</dict>
   ```
   <B>删除-v即可</B>
-## 六、安装用Clover制作
+## 六、安装完成
+
+## 七、安装用Clover制作（以下为进阶材料，想了解CLOVER具体是如何配置出来的朋友参考，目前尚不完整）
 ### 软件及版本
 | 软件 | 版本 | 下载地址 |
 | :--: | :--: |:-------------------- |
