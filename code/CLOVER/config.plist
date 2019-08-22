@@ -23,87 +23,13 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change HWEC to EC</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>
-					SFdFQw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change ECAV=One to ECTK=zero</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					cAFFQ0FW
-					</data>
-					<key>Replace</key>
-					<data>
-					cABFQ1RL
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change ECAV=One to ECTK=zero</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					cAFFQ0FW
-					</data>
-					<key>Replace</key>
-					<data>
-					cABFQ1RL
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _QA8 to XQA8</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1FBOA==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFFBOA==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change _QA9 to XQA9</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1FBOQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFFBOQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>Comment: Fix AsRock Z390 BIOS DSDT Device(RTC) bug</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					oAqTU1RBUwE=
-					</data>
+					<data>oAqTU1RBUwE=</data>
 					<key>Replace</key>
-					<data>
-					oAqRCv8L//8=
-					</data>
+					<data>oAqRCv8L//8=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -111,13 +37,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					R0ZYMA==
-					</data>
+					<data>R0ZYMA==</data>
 					<key>Replace</key>
-					<data>
-					SUdQVQ==
-					</data>
+					<data>SUdQVQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -125,13 +47,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					SERBUw==
-					</data>
+					<data>SERBUw==</data>
 					<key>Replace</key>
-					<data>
-					SERFRg==
-					</data>
+					<data>SERFRg==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -139,13 +57,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					SEVDSQ==
-					</data>
+					<data>SEVDSQ==</data>
 					<key>Replace</key>
-					<data>
-					SU1FSQ==
-					</data>
+					<data>SU1FSQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -153,13 +67,9 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					T1NJRA==
-					</data>
+					<data>T1NJRA==</data>
 					<key>Replace</key>
-					<data>
-					SURPUw==
-					</data>
+					<data>SURPUw==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -167,13 +77,29 @@
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>
-					X09TSQ==
-					</data>
+					<data>X09TSQ==</data>
 					<key>Replace</key>
-					<data>
-					WE9TSQ==
-					</data>
+					<data>WE9TSQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(_Q0A,0,N) to XQ0A</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1EwQQA=</data>
+					<key>Replace</key>
+					<data>WFEwQQA=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(_Q0B,0,N) to XQ0B</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1EwQgA=</data>
+					<key>Replace</key>
+					<data>WFEwQgA=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -189,18 +115,26 @@
 					QURQMQ==
 					</data>
 				</dict>
-				
+				<dict>
+					<key>Comment</key>
+					<string>change ALSD to ALS0</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QUxTRA==
+					</data>
+					<key>Replace</key>
+					<data>
+					QUxTMA==
+					</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
-
 		<key>DropTables</key>
 		<array>
-			<dict>
-				<key>Signature</key>
-				<string>MCFG</string>
-			</dict>
 			<dict>
 				<key>Signature</key>
 				<string>DMAR</string>
@@ -227,13 +161,6 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>Boot</key>
-	<dict>
-		<key>Arguments</key>
-		<string>-v -cdfon -igfxmlr dart=0</string>
-		<key>Debug</key>
-		<false/>
-	</dict>
 	<key>CPU</key>
 	<dict>
 		<key>HWPEnable</key>
@@ -259,75 +186,59 @@
 				<key>hda-idle-support</key>
 				<string>1</string>
 				<key>layout-id</key>
-				<integer>57</integer>
+				<integer>22</integer>
 				<key>model</key>
 				<string>Intel Sunrise Point-LP HD Audio</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL00,override-no-connect</key>
-				<data>AP///////wAoiSpCAAAAAAAbAQSQHRR4A95Qo1RMmSYPUFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgMJcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkgICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgAE4=</data>
+				<data>AP///////wAoiSpCAAAAAAAbAQSlHRR4A95Qo1RMmSYPUFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgMJcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkgICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgADk=</data>
 				<key>AAPL,ig-platform-id</key>
-				<data>
-				AACbPg==
-				</data>
+				<data>BQClPg==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal</string>
 				<key>device-id</key>
-				<data>
-				mz4AAA==
-				</data>
+				<data>pT4AAA==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
+				<key>disable-external-gpu</key>
+				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con0-enable</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>framebuffer-con0-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-flags</key>
+				<data>mAAAAA==</data>
 				<key>framebuffer-con1-enable</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>framebuffer-con1-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-flags</key>
+				<data>hwEAAA==</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
 				<key>framebuffer-con2-enable</key>
-				<data>
-				AQAAAA==
-				</data>
-				<key>framebuffer-con2-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con2-flags</key>
+				<data>hwEAAA==</data>
 				<key>framebuffer-fbmem</key>
-				<data>
-				AACQAA==
-				</data>
+				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
-				<data>
-				AAAABA==
-				</data>
+				<data>AACgAw==</data>
 				<key>framebuffer-unifiedmem</key>
-				<data>
-				AAAAgA==
-				</data>
+				<data>AAAAgA==</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 				<key>model</key>
-				<string>UHD Graphics 620 (Mobile)</string>
-			</dict>
-		</dict>
-		<key>UseIntelHDMI</key>
+				<string>Iris Plus Graphics 655</string>
+			</dict>		</dict>
+	</dict>
+	<key>Boot</key>
+	<dict>
+		<key>Arguments</key>
+		<string>-v -cdfon -igfxmlr dart=0</string>
+		<key>Debug</key>
 		<false/>
 	</dict>
 	<key>GUI</key>
@@ -373,14 +284,6 @@
 		<true/>
 		<key>AppleRTC</key>
 		<true/>
-		<key>Debug</key>
-		<false/>
-		<key>DellSMBIOSPatch</key>
-		<false/>
-		<key>KernelCpu</key>
-		<false/>
-		<key>KernelLapic</key>
-		<false/>
 		<key>KernelPm</key>
 		<true/>
 		<key>KernelToPatch</key>
@@ -388,57 +291,37 @@
 			<dict>
 				<key>Comment</key>
 				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
-				<data>
-				ILniAAAADzA=
-				</data>
+				<data>ILniAAAADzA=</data>
 				<key>Replace</key>
-				<data>
-				ILniAAAAkJA=
-				</data>
+				<data>ILniAAAAkJA=</data>
 			</dict>
 		</array>
-		<key>KernelXCPM</key>
-		<false/>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
 				<key>Comment</key>
 				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
-				<data>
-				SU9LaXQ=
-				</data>
+				<data>SU9LaXQ=</data>
 				<key>InfoPlistPatch</key>
 				<true/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelLpssI2C</string>
 				<key>Replace</key>
-				<data>
-				SU9LaXM=
-				</data>
+				<data>SU9LaXM=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
-				<key>Disabled</key>
-				<false/>
 				<key>Find</key>
-				<data>
-				SU9LaXQ=
-				</data>
+				<data>SU9LaXQ=</data>
 				<key>InfoPlistPatch</key>
 				<true/>
 				<key>Name</key>
 				<string>com.apple.driver.AppleIntelLpssI2CController</string>
 				<key>Replace</key>
-				<data>
-				SU9LaXM=
-				</data>
+				<data>SU9LaXM=</data>
 			</dict>
 		</array>
 	</dict>
