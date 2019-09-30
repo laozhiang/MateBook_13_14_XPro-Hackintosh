@@ -48,7 +48,7 @@
 |合盖睡眠| OK<BR> 两种情况<BR>1、外接电源同时外接显示器时，切换为台式机模式，外屏不关<BR>2、非同时外接电源和显示器时机器直接睡眠|
 |开盖唤醒| OK |
 | 睿频  | OK|
-| 键盘处理 | Windows=Command<BR>Alt=options<BR> F1=亮度降低 <BR>F2=亮度增加<BR>F3=键盘灯<BR>F4=静音(无效)<BR>F5=音量见效<BR>F6=音量提升<BR>F7=开关内屏,应对开机黑屏或者开关显示器<BR>F8=F18,可以通过Karabiner软件转换为Command+F1,外接屏幕是转换扩展或镜像显示模式<BR>F9=建议F19通过设置键盘快捷方式,设置为重启蓝牙<BR>F10=启停止触摸板,<BR>F11=Prtsc/F13;通过设置键盘快捷方式实现截屏<BR>F12/Ins=电源键|
+| 键盘处理 | Windows=Command<BR>Alt=options<BR> F1=亮度降低 <BR>F2=亮度增加<BR>F3=键盘灯<BR>F4=静音(无效)<BR>F5=音量减小<BR>F6=音量增加<BR>F7=开关内屏,应对开机黑屏或者开关显示器<BR>F8=F18,可以通过Karabiner软件转换为Command+F1,外接屏幕是转换扩展或镜像显示模式<BR>F9=建议F19通过设置键盘快捷方式,设置为重启蓝牙<BR>F10=启停止触摸板,<BR>F11=Prtsc/F13;通过设置键盘快捷方式实现截屏<BR>F12/Ins=电源键|
 |      | |
 ## 三、问题记录
 - 启动：偶尔启动不成功，重启之
@@ -74,7 +74,7 @@
 | MoJave镜像 | 无MAC机友必须 | - | 仅为推荐地址，相同版本的其他下载也可以，不保证好用，该版本是经过机友测试的<BR> https://blog.daliansky.net/macOS-Mojave-10.14.5-18F132-official-version-with-Clover-4928-original-image.html |
 | DiskGenius | 非必须 |制作winPE，调整硬盘分区|http://www.diskgenius.com |
 | EasyUEFI | Windows机友必须；<BR>Linux使用efibootmgr即可| 确认使用OK后，增加硬盘启动项 |未找到官方下载地址|
-|Github安装包 | 必须 | 黑苹果启动|https://github.com/laozhiang/MateBook-Hackintosh/MateBook_X_Pro_2019<BR> 仅下载该目录下所有文件即可 |
+|Github安装包 | 必须 | 黑苹果启动|https://github.com/laozhiang/MateBook_X_Pro_2019-Hackintosh/install 目录下文件<BR> 仅下载该目录下所有文件即可 |
 |  | |
 ### 2、制作安装盘
 #### 无MAC机友----网上找制作说明
